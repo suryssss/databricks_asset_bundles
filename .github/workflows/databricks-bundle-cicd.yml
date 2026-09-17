@@ -1,0 +1,49 @@
+name: Databricks Asset Bundle CI/CD
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+permissions:
+  contents: read
+
+jobs:
+  # Job 1: Validate bundle configuration on every Pull Request
+  validate:
+    name: Validate Bundle
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Databricks CLI
+        uses: databricks/setup-cli@v0.2
+
+      - name: Validate Asset Bundle
+        env:
+          DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
+          DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
+        run: |
+          databricks bundle validate
+
+  # Job 2: Deploy bundle to the environment when merged into main
+  deploy:
+    name: Deploy Bundle
+    needs: validate
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Databricks CLI
+        uses: databricks/setup-cli@v0.2
+
+      - name: Deploy Asset Bundle to Prod
+        env:
+          DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
+          DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
+        run: |
+          databricks bundle deploy --target prod
