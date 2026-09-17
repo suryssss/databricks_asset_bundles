@@ -10,9 +10,11 @@ permissions:
   contents: read
 
 jobs:
-  # Job 1: Validate bundle configuration on every Pull Request
+  # ──────────────────────────────────────────────
+  # Stage 1: Validate bundle on every push and PR
+  # ──────────────────────────────────────────────
   validate:
-    name: Validate Bundle
+    name: "✅ Validate Bundle"
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
@@ -25,12 +27,13 @@ jobs:
         env:
           DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
           DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
-        run: |
-          databricks bundle validate
+        run: databricks bundle validate
 
-  # Job 2: Deploy bundle to the environment when merged into main
-  deploy:
-    name: Deploy Bundle
+  # ──────────────────────────────────────────────
+  # Stage 2: Deploy and run in DEV
+  # ──────────────────────────────────────────────
+  deploy_dev:
+    name: "🚀 Deploy to Dev"
     needs: validate
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
@@ -41,9 +44,66 @@ jobs:
       - name: Setup Databricks CLI
         uses: databricks/setup-cli@main
 
-      - name: Deploy Asset Bundle to Prod
+      - name: Deploy Bundle to Dev
         env:
           DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
           DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
-        run: |
-          databricks bundle deploy --target prod
+        run: databricks bundle deploy --target dev
+
+      - name: Run Job in Dev
+        env:
+          DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
+          DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
+        run: databricks bundle run --target dev sample_job
+
+  # ──────────────────────────────────────────────
+  # Stage 3: Deploy and run in TEST
+  # ──────────────────────────────────────────────
+  deploy_test:
+    name: "🧪 Deploy to Test"
+    needs: deploy_dev
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Databricks CLI
+        uses: databricks/setup-cli@main
+
+      - name: Deploy Bundle to Test
+        env:
+          DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
+          DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
+        run: databricks bundle deploy --target test
+
+      - name: Run Job in Test
+        env:
+          DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
+          DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
+        run: databricks bundle run --target test sample_job
+
+  # ──────────────────────────────────────────────
+  # Stage 4: Deploy and run in PRODUCTION
+  # ──────────────────────────────────────────────
+  deploy_prod:
+    name: "🏭 Deploy to Prod"
+    needs: deploy_test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Databricks CLI
+        uses: databricks/setup-cli@main
+
+      - name: Deploy Bundle to Prod
+        env:
+          DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
+          DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
+        run: databricks bundle deploy --target prod
+
+      - name: Run Job in Prod
+        env:
+          DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
+          DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
+        run: databricks bundle run --target prod sample_job

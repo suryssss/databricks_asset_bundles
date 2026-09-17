@@ -27,6 +27,15 @@ targets:
     variables:
       catalog: workspace
       schema: dev
+  test:
+    # Test environment for integration testing before promoting to prod.
+    # Uses development mode so schedules are paused and resources are prefixed.
+    mode: development
+    workspace:
+      host: https://dbc-4cc5c7f9-4515.cloud.databricks.com
+    variables:
+      catalog: workspace
+      schema: test
   prod:
     mode: production
     workspace:
