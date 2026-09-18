@@ -1,10 +1,13 @@
-name: Databricks Asset Bundle CI/CD
+# E-Commerce Pipeline — CI/CD with Databricks Asset Bundles
+# Workflow: Validate → Deploy + Upload Data + Run (Test) → Deploy + Upload Data + Run (Prod)
+
+name: E-Commerce Pipeline CI/CD
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
   pull_request:
-    branches: [ "main" ]
+    branches: ["main"]
 
 permissions:
   contents: read
@@ -30,38 +33,12 @@ jobs:
         run: databricks bundle validate
 
   # ──────────────────────────────────────────────
-  # Stage 2: Deploy and run in DEV
-  # ──────────────────────────────────────────────
-  deploy_dev:
-    name: "🚀 Deploy to Dev"
-    needs: validate
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Code
-        uses: actions/checkout@v4
-
-      - name: Setup Databricks CLI
-        uses: databricks/setup-cli@main
-
-      - name: Deploy Bundle to Dev
-        env:
-          DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
-          DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
-        run: databricks bundle deploy --target dev
-
-      - name: Run Job in Dev
-        env:
-          DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
-          DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
-        run: databricks bundle run --target dev sample_job
-
-  # ──────────────────────────────────────────────
-  # Stage 3: Deploy and run in TEST
+  # Stage 2: Deploy, upload data, and run in TEST
   # ──────────────────────────────────────────────
   deploy_test:
-    name: "🧪 Deploy to Test"
-    needs: deploy_dev
+    name: "🧪 Deploy + Run Test"
+    needs: validate
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
@@ -76,17 +53,29 @@ jobs:
           DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
         run: databricks bundle deploy --target test
 
-      - name: Run Job in Test
+      - name: Upload CSV Data to Test Volume
         env:
           DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
           DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
-        run: databricks bundle run --target test sample_job
+        run: |
+          echo "📤 Uploading data files to test volume..."
+          for file in data/*.csv; do
+            echo "  Uploading $(basename $file)..."
+            databricks fs cp "$file" "dbfs:/Volumes/workspace/ecommerce_test/raw_data/$(basename $file)" --overwrite
+          done
+          echo "✅ All data files uploaded"
+
+      - name: Run Pipeline in Test
+        env:
+          DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
+          DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
+        run: databricks bundle run --target test ecommerce_pipeline
 
   # ──────────────────────────────────────────────
-  # Stage 4: Deploy and run in PRODUCTION
+  # Stage 3: Deploy, upload data, and run in PROD
   # ──────────────────────────────────────────────
   deploy_prod:
-    name: "🏭 Deploy to Prod"
+    name: "🏭 Deploy + Run Prod"
     needs: deploy_test
     runs-on: ubuntu-latest
     steps:
@@ -102,8 +91,20 @@ jobs:
           DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
         run: databricks bundle deploy --target prod
 
-      - name: Run Job in Prod
+      - name: Upload CSV Data to Prod Volume
         env:
           DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
           DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
-        run: databricks bundle run --target prod sample_job
+        run: |
+          echo "📤 Uploading data files to prod volume..."
+          for file in data/*.csv; do
+            echo "  Uploading $(basename $file)..."
+            databricks fs cp "$file" "dbfs:/Volumes/workspace/ecommerce_prod/raw_data/$(basename $file)" --overwrite
+          done
+          echo "✅ All data files uploaded"
+
+      - name: Run Pipeline in Prod
+        env:
+          DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
+          DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
+        run: databricks bundle run --target prod ecommerce_pipeline

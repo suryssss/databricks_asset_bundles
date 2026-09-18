@@ -1,0 +1,122 @@
+order_id,customer_id,order_date,status,payment_method,shipping_city
+O5001,C1058,8/15/2024,Shipped,,
+O5002,C1060,10/27/2024,Delivered,COD,Bengaluru
+O5003,C1028,2024/13/45,pending,PayPal,New York
+O5004,C1008,8/6/2024,cancelled,,mumbai
+O5005,C1043,,SHIPPED,Credit Card,new york
+O5006,C1040,10/8/2024,Returned,PayPal,
+O5007,C1033,10/16/2024,pending,Debit Card,mumbai
+O5008,C1008,5/12/2024,pending,UPI,Mumbai 
+O5009,C1010,2024-08-03,pending,COD,new york
+O5010,C1043,2024/13/45,Returned,credit card,Bengaluru
+O5011,C1039,17.3.2024,cancelled,COD,mumbai
+O5012,C1027,2024-03-05,Delivered,Debit Card,BANGALORE
+O5013,C1042,2024-02-27,Delivered,UPI,New York
+O5014,C1023,8/18/2024,SHIPPED,paypal,new york
+O5015,C1060,2024-06-21,SHIPPED,PayPal,
+O5016,C1045,2024/13/45,Delivered,COD,Bengaluru
+O5017,C1018,2024/13/45,cancelled,credit card,mumbai
+O5018,C1027,,cancelled,PayPal,
+O5019,C1053,16.3.2024,Cancelled,COD,new york
+O5020,C1003,1.11.2024,delivered,UPI,mumbai
+O5021,C1027,,,Debit Card,mumbai
+O5022,C1013,2024-04-19,Returned,UPI,mumbai
+O5023,C1010,,Returned,COD,Mumbai 
+O5024,C1037,2024/13/45,pending,credit card,new york
+O5025,C1047,2024-12-12,Returned,Credit Card,new york
+O5026,C1034,2024/13/45,Shipped,UPI,new york
+O5027,C1056,6.2.2024,Delivered,COD,BANGALORE
+O5028,C1044,2024-04-22,Cancelled,,
+O5029,C1054,2024-09-19,Returned,Credit Card,
+O5030,C1055,13.10.2024,delivered,,New York
+O5031,C1053,2024-11-13,,UPI,BANGALORE
+O5032,C1029,2024-07-24,Returned,credit card,
+O5033,C1016,2024-04-28,delivered,COD,Mumbai 
+O5034,C1036,2024-04-07,Pending,Credit Card,New York
+O5035,C1013,4/11/2024,pending,credit card,
+O5036,C1028,13.3.2024,Shipped,UPI,New York
+O5037,C1010,3.12.2024,cancelled,UPI,New York
+O5038,C1042,2024/13/45,Returned,paypal,
+O5039,C1048,3/27/2024,Shipped,credit card,
+O5040,C1037,,Delivered,Credit Card,
+O5041,C1043,2024-02-09,Shipped,credit card,
+O5042,C1045,2024/13/45,Returned,credit card,Bengaluru
+O5043,C1015,2024/13/45,Shipped,UPI,mumbai
+O5044,C1023,2024-01-25,delivered,credit card,mumbai
+O5045,C1029,,Returned,COD,New York
+O5046,C1036,28.8.2024,cancelled,PayPal,
+O5047,C1001,5.2.2024,Delivered,,BANGALORE
+O5048,C1027,16.3.2024,delivered,paypal,
+O5049,C1047,2024/13/45,pending,COD,Bengaluru
+O5050,C1049,2024-12-23,cancelled,Credit Card,mumbai
+O5051,C1006,2024-12-21,pending,Debit Card,BANGALORE
+O5052,C1060,2/4/2024,pending,Cash on Delivery,
+O5053,C1010,7/17/2024,Shipped,Cash on Delivery,
+O5054,C1044,8/4/2024,Returned,UPI,New York
+O5055,C1014,25.9.2024,Returned,PayPal,new york
+O5056,C1043,2024/13/45,Shipped,PayPal,BANGALORE
+O5057,C1024,2024/13/45,,Credit Card,Mumbai 
+O5058,C1016,17.3.2024,SHIPPED,UPI,Bengaluru
+O5059,C1056,,Cancelled,Cash on Delivery,new york
+O5060,C1040,4/4/2024,Returned,Cash on Delivery,Bengaluru
+O5061,C1022,2024-04-21,pending,,Mumbai 
+O5062,C1039,,Cancelled,Debit Card,new york
+O5063,C1023,9/7/2024,SHIPPED,Credit Card,BANGALORE
+O5064,C1040,12/7/2024,Returned,paypal,New York
+O5065,C1060,2024-02-15,,paypal,New York
+O5066,C1024,2024/13/45,Pending,COD,Bengaluru
+O5067,C1005,,Returned,Debit Card,Mumbai 
+O5068,C1031,,cancelled,paypal,Bengaluru
+O5069,C1042,,cancelled,paypal,Bengaluru
+O5070,C1040,,Delivered,COD,BANGALORE
+O5071,C1006,2024/13/45,Returned,paypal,
+O5072,C1047,2024/13/45,,Credit Card,new york
+O5073,C1028,5/16/2024,cancelled,PayPal,
+O5074,C1028,5.12.2024,Shipped,PayPal,BANGALORE
+O5075,C1042,2024/13/45,,PayPal,
+O5076,C1053,,Delivered,UPI,
+O5077,C1002,,delivered,credit card,new york
+O5078,C1051,2024/13/45,Delivered,PayPal,Mumbai 
+O5079,C1013,2024-10-09,Cancelled,credit card,new york
+O5080,C1006,1.1.2024,delivered,UPI,New York
+O5081,C1053,2024/13/45,Cancelled,Cash on Delivery,Bengaluru
+O5082,C1018,2024/13/45,Pending,Debit Card,mumbai
+O5083,C1011,23.6.2024,delivered,credit card,Bengaluru
+O5084,C1048,2024/13/45,SHIPPED,PayPal,new york
+O5085,C1006,16.1.2024,Delivered,Cash on Delivery,
+O5086,C1054,3/20/2024,Shipped,PayPal,
+O5087,C1007,2.4.2024,delivered,,BANGALORE
+O5088,C1019,7.9.2024,Shipped,COD,Mumbai 
+O5089,C1014,4.3.2024,Pending,paypal,Mumbai 
+O5090,C1020,5/22/2024,delivered,COD,Mumbai 
+O5091,C1026,2024/13/45,Returned,Credit Card,mumbai
+O5092,C1046,2024/13/45,Pending,PayPal,BANGALORE
+O5093,C1052,,Shipped,PayPal,new york
+O5094,C1042,5/11/2024,SHIPPED,Credit Card,Mumbai 
+O5095,C1027,2024-01-06,,UPI,
+O5096,C1024,2024/13/45,Pending,PayPal,new york
+O5097,C1049,,cancelled,COD,New York
+O5098,C9999,2024-02-08,pending,,New York
+O5099,C1055,2024-04-16,Returned,COD,
+O5100,C1020,2/11/2024,Delivered,credit card,
+O5101,C9999,18.11.2024,SHIPPED,,
+O5102,C1022,2024-12-19,Delivered,UPI,new york
+O5103,C1055,10/14/2024,Returned,credit card,BANGALORE
+O5104,C1059,,SHIPPED,COD,BANGALORE
+O5105,C1017,14.5.2024,pending,credit card,BANGALORE
+O5106,C1006,2024/13/45,,Credit Card,mumbai
+O5107,C1008,11/13/2024,Returned,PayPal,
+O5108,C1016,2024-07-15,pending,UPI,
+O5109,C1032,2024/13/45,Shipped,,BANGALORE
+O5110,C1020,13.3.2024,Returned,Credit Card,
+O5111,C1011,22.7.2024,cancelled,PayPal,Mumbai 
+O5112,C1058,5/27/2024,Returned,Cash on Delivery,new york
+O5113,C1053,1/23/2024,delivered,UPI,New York
+O5114,C1016,6/2/2024,Delivered,paypal,
+O5115,C1007,2024-07-20,,PayPal,Bengaluru
+O5116,C1013,11/21/2024,pending,COD,Mumbai 
+O5117,C1040,2024-12-21,Cancelled,UPI,Mumbai 
+O5118,C1016,2024/13/45,Cancelled,PayPal,
+O5119,C1045,,,COD,new york
+O5120,C1019,2024/13/45,SHIPPED,paypal,new york
+O5011,C1039,17.3.2024,cancelled,COD,mumbai

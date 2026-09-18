@@ -1,0 +1,63 @@
+customer_id,customer_name,email,phone,city,country,signup_date,age
+C1001,sara smith,sara.smith32@yahoo.com,unknown,Mumbai,Canada,,-5
+C1002, John Kumar ,john.kumar44@yahoo.com,+1-304-294-7224,Berlin,France,13-Feb-2023,30
+C1003,jane wang,jane.wang11@gmail.com,7194793134,Mumbai,U.S.A.,11/3/2023,150
+C1004,ROBERT WHITE,robert.white88@gmail.com,8730987070,Delhi,U.S.A.,8/13/2023,-5
+C1005, James Taylor ,james.taylor47@yahoo.com,,New York,,20-Aug-2023,64
+C1006,linda khan,james.taylor47@yahoo.com,unknown,  Paris,Canada,2023-10-07,19
+C1007,WEI MILLER,wei.miller8@yahoo.com,,Bangalore,Germany,,
+C1008,priya moore,priya.moore57@gmail.com,+1-265-546-1344,  Paris,usa,2023-02-23,
+C1009,ROBERT THOMAS,robert.thomas70@yahoo.com,,Houston,USA,2023-06-14,-5
+C1010,SARA WANG,sara.wang25@gmail.com,unknown,Bangalore,United Kingdom,,
+C1011, Liu Smith ,liu.smith34@gmail.com,+1-913-948-8973,Los Angeles,France,2023-10-24,
+C1012,Jane Jackson,,,  Paris,India,10/17/2023,150
+C1013, David Miller ,robert.thomas70@yahoo.com,3139027119,New York,,6-Aug-2023,-5
+C1014,sara patel,sara.patel15@gmail.com,9247744978,Delhi,USA,,-5
+C1015,DAVID KHAN,david.khan95@gmail.com,(758) 236-7049,Bangalore,,12-Jan-2023,33
+C1016, Wei White ,wei.white80@gmail.com,,Houston,United Kingdom,12/26/2023,150
+C1017, Anna Garcia ,anna.garcia45@gmail.com,5712367625,New York,usa,22-Sep-2023,
+C1018,James Khan,james.khan14@gmail.com,,Berlin,United Kingdom,9/22/2023,-5
+C1019,Grace Davis,grace.davis93@gmail.com,,New York,IN,,
+C1020,carlos harris,carlos.harris60@gmail.com,(490) 727-6491,Los Angeles,India,2023-11-10,48
+C1021,MARIA TAYLOR,maria.taylor92@gmail.com,(968) 988-2746,Houston,Canada,12/17/2023,150
+C1022,omar white,omar.white97@gmail.com,(656) 362-8777,Toronto,usa,21-Apr-2023,-5
+C1023,anna khan,anna.khan41@gmail.com,3781844052,New York,France,,150
+C1024,john wilson,john.wilson97@gmail.com,,Bengaluru,Canada,,26
+C1025,Liu Harris,liu.harris11@gmail.com,,New York,Germany,,-5
+C1026,Anna Lee,anna.lee97@yahoo.com,(329) 684-2874,Bengaluru,IN,2023-08-23,24
+C1027, Priya Harris ,priya.harris51@gmail.com,unknown,Berlin,usa,,-5
+C1028, John Taylor ,john.taylor14@gmail.com,unknown,  Paris,India,24-Oct-2023,-5
+C1029, Maria Wang ,john.taylor14@gmail.com,unknown,Mumbai,United Kingdom,2023-12-09,
+C1030, Fatima Thomas ,fatima.thomas3@yahoo.com,unknown,Mumbai,usa,9-May-2023,
+C1031,AMIT BROWN,amit.brown25@yahoo.com,(302) 398-5853,Los Angeles,Germany,2023-05-01,
+C1032,Fatima Brown,fatima.brown74@yahoo.com,unknown, Chicago,India,5-Oct-2023,150
+C1033,GRACE CLARK,grace.clark67@gmail.com,+1-802-639-6003,Mumbai,U.S.A.,4/9/2023,53
+C1034, Emily Smith ,robert.thomas70@yahoo.com,unknown,houston,IN,4/14/2023,
+C1035,MIKE JOHNSON,mike.johnson40@gmail.com,unknown,  Paris,France,,34
+C1036,Mike Wang,amit.brown25@yahoo.com,unknown,  Paris,UK,,60
+C1037, Emily Davis ,emily.davis89@gmail.com,+1-978-763-1601,,USA,,-5
+C1038, Grace Thomas ,grace.thomas98@yahoo.com,5048494026,Toronto,usa,2023-09-01,
+C1039,fatima miller,fatima.miller54@gmail.com,(395) 813-9327,New York,IN,26-Sep-2023,-5
+C1040, James Harris ,james.harris20@gmail.com,,N/A,United Kingdom,,
+C1041,FATIMA JOHNSON,fatima.johnson65@gmail.com,(667) 215-3361, Chicago,UK,,150
+C1042,Amit Thomas,amit.thomas80@yahoo.com,3905584866,Berlin,United Kingdom,2-May-2023,
+C1043,OMAR TAYLOR,omar.taylor22@yahoo.com,8275591099,Bengaluru,usa,26-Aug-2023,-5
+C1044, James Miller ,james.miller89@yahoo.com,4468798461,San Francisco,IN,2023-01-27,
+C1045,GRACE WILSON,grace.wilson82@yahoo.com,,  Paris,United Kingdom,5-Feb-2023,
+C1046,david white,david.white68@gmail.com,(317) 679-2233, Chicago,United Kingdom,28-Sep-2023,-5
+C1047, Linda Brown ,linda.brown48@gmail.com,unknown,London,,,44
+C1048,David Johnson,david.johnson39@gmail.com,(664) 579-9850,Delhi,USA,,-5
+C1049, Chris Anderson ,chris.anderson31@gmail.com,+1-757-860-6876,Los Angeles,UK,2023-08-03,
+C1050,James Garcia,james.garcia98@gmail.com,(810) 202-5542,houston,USA,2023-03-18,
+C1051,James Davis,james.davis23@yahoo.com,+1-316-963-2041,Toronto,,2-Dec-2023,19
+C1052, Fatima Moore ,fatima.moore88@yahoo.com,unknown,Toronto,Germany,20-Sep-2023,150
+C1053,SARA BROWN,sara.brown56@gmail.com,3832937460, Chicago,United Kingdom,2023-06-05,-5
+C1054,David White,david.white76@gmail.com,4578741716,Mumbai,usa,,-5
+C1055,SARA KHAN,sara.khan55@gmail.com,2124352982,houston,France,5/11/2023,150
+C1056,Mike Patel,mike.patel12@gmail.com,unknown, Chicago,IN,2023-10-03,150
+C1057, Fatima Clark ,fatima.clark54@yahoo.com,8558132051,London,India,7/20/2023,
+C1058,robert miller,robert.miller16@yahoo.com,+1-589-745-4770,N/A,,,-5
+C1059,Sara Moore,sara.moore42@yahoo.com,,Mumbai,UK,10-Dec-2023,
+C1060,Mike Jackson,mike.jackson68@gmail.com,(441) 305-3399,Toronto,France,,150
+C1006,linda khan,james.taylor47@yahoo.com,unknown,  Paris,Canada,2023-10-07,19
+C1013, David Miller ,robert.thomas70@yahoo.com,3139027119,New York,,6-Aug-2023,-5
