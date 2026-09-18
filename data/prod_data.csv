@@ -1,0 +1,75 @@
+product_id,product_name,category,price,stock_quantity
+P201,Wireless Mouse,Electronics,$165.3,202
+P202,BLUETOOTH SPEAKER,Electronics,411.53,187
+P203,USB-C CABLE,Electronics,,214
+P204,LAPTOP STAND,Electronics,,30
+P205, Noise Cancelling Headphones,Electronics,N/A,485
+P206,smartwatch,Electronics,$29.55,-3
+P207,POWER BANK,Electronics,N/A,
+P208,wireless mouse,electronics,N/A,-3
+P209,BLUETOOTH SPEAKER,electronics,53.23,288
+P210, USB-C Cable,electronics,N/A,
+P211,LAPTOP STAND,electronics,,
+P212, Noise Cancelling Headphones,electronics,$398.22,
+P213,Smartwatch,electronics,,147
+P214,POWER BANK,electronics,$258.41,
+P215,green tea pack,Electronic ,213.74,
+P216,Olive Oil,Electronic ,N/A,in stock
+P217,Almonds 500g,Electronic ,420.78 ,242
+P218,coffee beans,Electronic ,366.92 ,in stock
+P219,cotton t-shirt,Clothing,359.73 ,in stock
+P220,DENIM JEANS,Clothing,88.18,252
+P221, Running Shoes,Clothing,$385.28,-3
+P222, Hoodie,Clothing,,-3
+P223, Winter Jacket,Clothing,203.81 ,-3
+P224,wool socks,Clothing,432.67 ,in stock
+P225,COTTON T-SHIRT,clothing,,-3
+P226,Denim Jeans,clothing,$46.08,-3
+P227,running shoes,clothing,N/A,
+P228,hoodie,clothing,,
+P229, Winter Jacket,clothing,N/A,486
+P230, Wool Socks,clothing,N/A,in stock
+P231,Non-stick Pan,Home & Kitchen,,in stock
+P232,Coffee Maker,Home & Kitchen,$99.35,-3
+P233,BLENDER,Home & Kitchen,173.33,52
+P234,Vacuum Cleaner,Home & Kitchen,270.63 ,314
+P235,led desk lamp,Home & Kitchen,N/A,-3
+P236, Yoga Mat,Home and Kitchen,,62
+P237,dumbbell set,Home and Kitchen,,in stock
+P238,cricket bat,Home and Kitchen,47.51,
+P239,FOOTBALL,Home and Kitchen,$241.92,264
+P240,Fiction Novel,Books,N/A,-3
+P241,cookbook,Books,380.28 ,500
+P242,self-help guide,Books,$261.61,-3
+P243,HISTORY BOOK,Books,N/A,-3
+P244,children's storybook,Books,$410.07,in stock
+P245, Fiction Novel,BOOKS,366.85,
+P246, Cookbook,BOOKS,N/A,
+P247,Self-Help Guide,BOOKS,405.24 ,
+P248,history book,BOOKS,$114.13,-3
+P249, Children's Storybook,BOOKS,N/A,460
+P250,Building Blocks,Toys,455.05 ,409
+P251, RC Car,Toys,$455.34,-3
+P252, Puzzle Set,Toys,395.62 ,in stock
+P253,ACTION FIGURE,Toys,203.69,-3
+P254,YOGA MAT,Sports,496.59,in stock
+P255,DUMBBELL SET,Sports,N/A,
+P256,Cricket Bat,Sports,$276.59,10
+P257,FOOTBALL,Sports,$265.66,-3
+P258,face cream,Beauty,$18.86,-3
+P259,Shampoo,Beauty,,-3
+P260, Lipstick,Beauty,455.46 ,in stock
+P261,Perfume,Beauty,N/A,-3
+P262,WIRELESS MOUSE,,$437.04,311
+P263,Bluetooth Speaker,,,316
+P264,USB-C Cable,,N/A,in stock
+P265,laptop stand,,442.2,-3
+P266,Noise Cancelling Headphones,,25.89,in stock
+P267,SMARTWATCH,,381.2,
+P268,POWER BANK,,,in stock
+P269, Green Tea Pack,Grocery,351.11 ,-3
+P270,olive oil,Grocery,72.88,in stock
+P271,ALMONDS 500G,Grocery,$40.91,219
+P272,coffee beans,Grocery,336.39,-3
+P204,LAPTOP STAND,Electronics,,30
+P221, Running Shoes,Clothing,$385.28,-3
